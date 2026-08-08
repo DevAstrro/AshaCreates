@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AshaCreates — Handcrafted Indian ornaments and jewelry. Where Indian tradition meets handmade artistry. Shop unique, handmade earrings, necklaces, bracelets, and festive jewelry." />
+  <meta name="keywords" content="handmade jewelry, Indian ornaments, artisan jewelry, handcrafted, traditional Indian jewelry, AshaCreates" />
+  <meta name="author" content="AshaCreates" />
+  <meta name="theme-color" content="#4A0E1C" />
+
+  <title>AshaCreates — Handcrafted Indian Ornaments & Jewelry</title>
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Charm:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <link rel="stylesheet" href="/src/styles/index.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+  <script>
+    window.addEventListener('error', function(e) {
+      document.body.innerHTML += '<div style="color:red; z-index:9999; position:absolute; top:0; background:white; padding:10px;">Error: ' + e.message + ' at ' + e.filename + ':' + e.lineno + '</div>';
+    });
+    window.addEventListener('unhandledrejection', function(e) {
+      document.body.innerHTML += '<div style="color:red; z-index:9999; position:absolute; top:50px; background:white; padding:10px;">Unhandled Rejection: ' + e.reason + '</div>';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+@media (max-width: 1280px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+  .filter-sidebar {
+    display: none; /* Mobile drawer toggle needed */
+  }
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-detail {
+    gap: var(--spacing-6);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hamburger menu needed */
+  }
+  .hero-title {
+    font-size: var(--font-size-4xl);
+  }
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+  .cart-page {
+    grid-template-columns: 1fr;
+  }
+  .cart-item {
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto auto;
+  }
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Hero Section Stacking */
+  .hero {
+    grid-template-columns: 1fr !important;
+    padding: 70px 6% 40px !important;
+    text-align: center;
+  }
+  
+  .hero-copy {
+    margin: 0 auto;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-image-container {
+    height: 420px !important;
+    margin-top: 20px;
+  }
+
+  /* 2-column mobile grids */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Story Stacking */
+  .story-section {
+    grid-template-columns: 1fr !important;
+    min-height: auto;
+  }
+
+  .story-copy {
+    padding: 60px 8%;
+    text-align: center;
+  }
+
+  .story-copy h2 {
+    margin-bottom: 15px;
+  }
+  
+  .story-copy .btn {
+    align-self: center !important;
+  }
+
+  /* Craftsmanship Stacking */
+  .craftsmanship-section {
+    grid-template-columns: 1fr !important;
+    padding: 60px 8%;
+    text-align: center;
+  }
+
+  /* Reviews */
+  .reviews-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer Stacking */
+  .site-footer {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    margin-bottom: 10px;
+  }
+  
+  .footer-brand p {
+    margin: 15px auto 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-bottom-links {
+    justify-content: center;
+  }
+
+  /* Navbar Adjustments */
+  .nav-links {
+    display: none; /* Can be toggled with a hamburger menu later */
+  }
+
+  /* Product Add to Bag button visible on mobile */
+  .add {
+    opacity: 1 !important;
+    transform: translate(-50%, 0) !important;
+    position: relative;
+    left: 0;
+    transform: none !important;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+}

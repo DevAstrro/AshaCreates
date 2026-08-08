@@ -1,0 +1,251 @@
+/* 
+  Home Layout - Editorial & Asymmetrical 
+*/
+
+/* General Section Typography */
+.section-title-editorial {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-maroon-deep);
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+  letter-spacing: -0.03em;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title-editorial::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-gold);
+  margin: var(--spacing-6) auto 0;
+}
+
+/* Our Story - Overlapping Editorial Layout */
+.story-editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-8);
+  align-items: center;
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: var(--spacing-20) var(--spacing-4);
+}
+
+.story-image-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.story-image-wrapper img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-heavy);
+}
+
+.story-content-wrapper {
+  background: rgba(253, 251, 247, 0.95);
+  backdrop-filter: var(--glass-blur);
+  padding: var(--spacing-12);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  margin-left: -15%; /* Overlap the image */
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+.story-content-wrapper h2 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin-bottom: var(--spacing-6);
+  color: var(--color-maroon);
+}
+
+.story-content-wrapper p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Collection & Product Asymmetrical Grids */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-8);
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+.editorial-grid > div:nth-child(3n+1) { grid-column: span 7; }
+.editorial-grid > div:nth-child(3n+2) { grid-column: span 5; margin-top: 10%; }
+.editorial-grid > div:nth-child(3n+3) { grid-column: span 6; margin-left: 10%; }
+.editorial-grid > div:nth-child(3n+4) { grid-column: span 6; }
+.editorial-grid > div:nth-child(3n+5) { grid-column: span 4; margin-top: -5%; }
+.editorial-grid > div:nth-child(3n+6) { grid-column: span 8; }
+
+/* Why AshaCreates - Minimalist List */
+.why-asha-section {
+  background: radial-gradient(circle at center, #ffffff 0%, var(--color-cream) 100%);
+  padding: var(--spacing-32) var(--spacing-4);
+  position: relative;
+}
+
+.features-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-10);
+}
+
+.feature-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding-bottom: var(--spacing-10);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: transform var(--transition-normal);
+}
+
+.feature-item:hover {
+  transform: translateX(10px);
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-2);
+  color: var(--color-maroon-deep);
+}
+
+.feature-content p {
+  font-size: 1.1rem;
+  color: #554840;
+}
+
+/* Customer Reviews - Magazine Pull Quotes */
+.reviews-section {
+  padding: var(--spacing-32) 0;
+  background: var(--color-ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding: 0 var(--spacing-20) var(--spacing-10);
+  gap: var(--spacing-12);
+}
+
+.reviews-carousel::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.review-editorial-card {
+  scroll-snap-align: center;
+  min-width: 60vw;
+  max-width: 800px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.review-pull-quote {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.4;
+  color: var(--color-maroon-deep);
+  font-style: italic;
+  margin-bottom: var(--spacing-8);
+  position: relative;
+}
+
+.review-pull-quote::before {
+  content: '"';
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  font-size: 6rem;
+  color: var(--color-gold);
+  opacity: 0.2;
+  font-family: serif;
+}
+
+.review-author-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.review-author-meta .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.review-author-meta .details {
+  text-align: left;
+}
+
+.review-author-meta .name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--color-maroon);
+}
+
+.review-author-meta .product {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive Overrides */
+@media (max-width: 900px) {
+  .story-editorial {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-content-wrapper {
+    margin-left: 0;
+    margin-top: -10%;
+  }
+
+  .editorial-grid > div {
+    grid-column: span 12 !important;
+    margin: 0 !important;
+  }
+  
+  .review-editorial-card {
+    min-width: 85vw;
+  }
+}

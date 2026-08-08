@@ -1,0 +1,281 @@
+/* ==========================================================================
+   Announcement Bar
+   ========================================================================== */
+.announcement-bar {
+    background: var(--color-maroon);
+    color: var(--color-ivory);
+    text-align: center;
+    padding: 8px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+    min-height: 650px;
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-copy {
+    max-width: 620px;
+    z-index: 2;
+}
+
+.hero-copy h1 {
+    font-size: clamp(48px, 6vw, 75px);
+}
+
+.hero-copy-desc {
+    max-width: 470px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-brown-soft);
+    margin: 25px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-image-container {
+    height: 530px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-product-frame {
+    width: min(450px, 90%);
+    aspect-ratio: 0.86;
+    border-radius: 48% 48% 4% 4%;
+    overflow: hidden;
+    position: relative;
+    transform: rotate(1.5deg);
+    box-shadow: 0 24px 60px rgba(74, 40, 30, 0.10);
+    border: 1px solid var(--border-warm);
+}
+
+.hero-product-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.hero-product-frame:hover img {
+    transform: scale(1.035);
+}
+
+.hero-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    font: italic 16px var(--font-family-heading);
+    color: var(--color-brown-soft);
+}
+
+/* ==========================================================================
+   Collections Grid Layout
+   ========================================================================== */
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.collection-photo-card:nth-child(2) {
+    transform: translateY(22px);
+}
+
+.collection-photo-card:nth-child(4) {
+    transform: translateY(12px);
+}
+
+/* ==========================================================================
+   The Asha Story
+   ========================================================================== */
+.story-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 650px;
+}
+
+.story-image-container {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: grid;
+    place-items: center;
+    padding: 8%;
+}
+
+.story-image-container img {
+    width: min(520px, 100%);
+    aspect-ratio: 0.9;
+    object-fit: cover;
+    border-radius: 50% 50% 0 0;
+    box-shadow: var(--shadow-medium);
+    border: 1px solid var(--border-warm);
+}
+
+.story-copy {
+    padding: 100px 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-copy h2 {
+    font-size: clamp(44px, 5vw, 68px);
+    margin-bottom: 28px;
+}
+
+.story-desc {
+    color: var(--color-brown-soft);
+    line-height: 1.9;
+    max-width: 520px;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   Craftsmanship
+   ========================================================================== */
+.craftsmanship-section {
+    background: var(--color-cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.craftsmanship-copy h2 {
+    font-size: clamp(40px, 4vw, 58px);
+    margin-bottom: 20px;
+}
+
+.craft-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.craft-step-number {
+    font: 64px var(--font-family-heading);
+    line-height: 1;
+    display: block;
+    color: var(--color-terracotta);
+    opacity: 0.6;
+}
+
+.craft-step-title {
+    display: block;
+    color: var(--color-maroon);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.craft-image {
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-warm);
+    box-shadow: var(--shadow-medium);
+}
+
+/* ==========================================================================
+   Materials
+   ========================================================================== */
+.materials-section {
+    text-align: center;
+    padding: 80px 8%;
+}
+
+.materials-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.material-item {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.material-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.icon-brass { border: 2px solid #C9964A; }
+.icon-gold { border: 2px solid #D8B5AA; }
+.icon-kundan { border: 2px dashed #9E493B; }
+
+/* ==========================================================================
+   Testimonials
+   ========================================================================== */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.review-card {
+    margin: 0;
+    padding: 30px;
+    background: #fffaf3;
+    border: 1px solid var(--border-warm);
+    font: 20px/1.4 var(--font-family-heading);
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-stars {
+    color: var(--color-gold);
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.review-author {
+    font: 11px var(--font-family-body);
+    margin-top: auto;
+    padding-top: 25px;
+    color: #9a6d59;
+}
+
+/* ==========================================================================
+   Final CTA
+   ========================================================================== */
+.final-cta {
+    text-align: center;
+    padding: 100px 8%;
+}
+
+.final-cta h2 {
+    font-size: clamp(36px, 4vw, 50px);
+    margin-bottom: 20px;
+}
+
+

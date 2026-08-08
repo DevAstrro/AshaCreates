@@ -1,0 +1,80 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('/images/hero-ornament.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Luxurious vignette overlay */
+  background: radial-gradient(circle at center, rgba(0,0,0,0.1) 0%, rgba(67, 12, 21, 0.85) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: var(--color-ivory);
+  max-width: 900px;
+  padding: 0 var(--spacing-6);
+  perspective: 1000px;
+}
+
+.hero-tagline {
+  color: var(--color-gold-bright);
+  letter-spacing: 0.25em;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-6);
+  font-weight: 600;
+  display: block;
+}
+
+.hero-title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  margin-bottom: var(--spacing-6);
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  text-shadow: 0 10px 30px rgba(197, 152, 73, 0.2);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-10);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+}
+
+/* Staggered Animations */
+.hero-enter-1 { animation: floatUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both; }
+.hero-enter-2 { animation: floatUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.4s both; }
+.hero-enter-3 { animation: floatUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s both; }
+.hero-enter-4 { animation: floatUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.8s both; }
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
