@@ -16,13 +16,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Charm:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" href="./favicon.ico" />
 
-  <link rel="stylesheet" href="/src/styles/index.css" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="./src/styles/index.css" />
 </head>
 <body>
   <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
+  <!-- Entry Point -->
+  <script type="module" src="./src/main.js"></script>
   <script>
     window.addEventListener('error', function(e) {
       document.body.innerHTML += '<div style="color:red; z-index:9999; position:absolute; top:0; background:white; padding:10px;">Error: ' + e.message + ' at ' + e.filename + ':' + e.lineno + '</div>';
