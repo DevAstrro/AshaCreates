@@ -29,7 +29,7 @@ const renderHero = () => `
         </div>
         <div class="hero-image-container reveal delay-1">
             <div class="hero-product-frame">
-                <img src="/images/hero-ornament.jpg" alt="AshaCreates Jewelry" fetchpriority="high">
+                <img src="./images/hero-ornament.jpg" alt="AshaCreates Jewelry" fetchpriority="high">
             </div>
         </div>
     </section>
@@ -61,7 +61,7 @@ const renderCollections = () => `
         </div>
         <div class="collections-grid">
             <a href="#/shop?category=everyday" class="collection-photo-card">
-                <img src="/images/earrings-jhumka.jpg" alt="Everyday" loading="lazy">
+                <img src="./images/earrings-jhumka.jpg" alt="Everyday" loading="lazy">
                 <div class="overlay"></div>
                 <div class="content">
                     <span>Everyday</span>
@@ -69,7 +69,7 @@ const renderCollections = () => `
                 </div>
             </a>
             <a href="#/shop?category=necklaces" class="collection-photo-card">
-                <img src="/images/necklace-kundan.jpg" alt="Necklaces" loading="lazy">
+                <img src="./images/necklace-kundan.jpg" alt="Necklaces" loading="lazy">
                 <div class="overlay"></div>
                 <div class="content">
                     <span>Necklaces</span>
@@ -77,7 +77,7 @@ const renderCollections = () => `
                 </div>
             </a>
             <a href="#/shop?category=festive" class="collection-photo-card">
-                <img src="/images/festive-set.jpg" alt="Festive" loading="lazy">
+                <img src="./images/festive-set.jpg" alt="Festive" loading="lazy">
                 <div class="overlay"></div>
                 <div class="content">
                     <span>Festive</span>
@@ -85,7 +85,7 @@ const renderCollections = () => `
                 </div>
             </a>
             <a href="#/shop?category=custom" class="collection-photo-card">
-                <img src="/images/artisan-workspace.jpg" alt="Custom" loading="lazy">
+                <img src="./images/artisan-workspace.jpg" alt="Custom" loading="lazy">
                 <div class="overlay"></div>
                 <div class="content">
                     <span>Custom</span>
@@ -98,7 +98,7 @@ const renderCollections = () => `
 
 const renderBestsellers = () => {
     const productsHtml = getBestsellers().slice(0, 4).map((p) => {
-        const image = p.image || '/images/earrings-jhumka.jpg';
+        const image = p.image || './images/earrings-jhumka.jpg';
         // Mock descriptor if none exists in data
         const descriptor = p.description ? p.description.split('.')[0] : 'Handcrafted • Made in India';
         const inWishlist = isWishlisted(p.id);
@@ -145,7 +145,7 @@ const renderBestsellers = () => {
 const renderStory = () => `
     <section id="story" class="story-section reveal">
         <div class="story-image-container">
-            <img src="/images/custom-pendant.jpg" alt="The Asha Story" loading="lazy">
+            <img src="./images/custom-pendant.jpg" alt="The Asha Story" loading="lazy">
         </div>
         <div class="story-copy">
             <p class="eyebrow">THE ASHA STORY</p>
@@ -183,7 +183,7 @@ const renderCraftsmanship = () => `
             </div>
         </div>
         <div>
-            <img src="/images/artisan-workspace.jpg" alt="Craftsmanship" class="craft-image" loading="lazy">
+            <img src="./images/artisan-workspace.jpg" alt="Craftsmanship" class="craft-image" loading="lazy">
         </div>
     </section>
 `;

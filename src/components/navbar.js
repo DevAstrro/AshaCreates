@@ -16,7 +16,7 @@ export function initNavbar() {
 
             <!-- Logo -->
             <a href="#/" class="logo" style="display: flex; align-items: center; gap: 10px;">
-                <img src="/images/logo.png" alt="AshaCreates Logo" style="height: 40px; width: auto; border-radius: 4px;">
+                <img src="./images/logo.png" alt="AshaCreates Logo" style="height: 40px; width: auto; border-radius: 4px;">
                 <span style="font-size: 1.15em;"><span style="font-family: 'Copperplate Gothic', 'Copperplate Gothic Light', Copperplate, serif; font-weight: normal; letter-spacing: 0.5px; text-transform: uppercase;">Asha</span><span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; text-transform: none; margin-left: 2px;">Creates</span></span>
             </a>
 

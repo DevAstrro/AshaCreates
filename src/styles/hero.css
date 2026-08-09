@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-image: url('/images/hero-ornament.jpg');
+  background-image: url('./images/hero-ornament.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Parallax effect */

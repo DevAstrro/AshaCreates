@@ -6,7 +6,7 @@ export function createProductCard(product) {
 
     const isDiscounted = product.originalPrice && product.originalPrice > product.price;
     const badgeHTML = product.badge ? `<span class="badge badge-${product.badge.toLowerCase()}">${product.badge}</span>` : '';
-    const image = product.image || '/images/earrings-jhumka.jpg';
+    const image = product.image || './images/earrings-jhumka.jpg';
     const descriptor = product.description ? product.description.split('.')[0] : 'Handcrafted • Made in India';
     
     const inWishlist = isWishlisted(product.id);

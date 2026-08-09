@@ -10,13 +10,13 @@ export async function renderJournalPage(container) {
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
                 <article>
-                    <img src="/images/artisan-workspace.jpg" alt="Workspace" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; margin-bottom: 20px;">
+                    <img src="./images/artisan-workspace.jpg" alt="Workspace" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; margin-bottom: 20px;">
                     <p class="eyebrow">BEHIND THE SCENES</p>
                     <h3 style="font-size: 24px; margin-bottom: 10px;">The Making of Our Festive Collection</h3>
                     <p style="color: var(--color-brown-soft); line-height: 1.6;">A look into the days of sketching, shaping, and painting that bring our most vibrant collection to life...</p>
                 </article>
                 <article>
-                    <img src="/images/bracelet-bells.jpg" alt="Styling" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; margin-bottom: 20px;">
+                    <img src="./images/bracelet-bells.jpg" alt="Styling" style="width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; margin-bottom: 20px;">
                     <p class="eyebrow">STYLING GUIDE</p>
                     <h3 style="font-size: 24px; margin-bottom: 10px;">How to Layer Heritage Pieces</h3>
                     <p style="color: var(--color-brown-soft); line-height: 1.6;">Tips on mixing modern outfits with traditional Kundan and oxidized silver jewelry for a balanced look...</p>

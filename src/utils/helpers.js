@@ -28,5 +28,5 @@ export function debounce(func, wait) {
 }
 
 export function getImagePath(id) {
-    return '/images/placeholder.jpg';
+    return './images/placeholder.jpg';
 }

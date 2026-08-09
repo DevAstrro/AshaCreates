@@ -173,7 +173,7 @@ export async function renderCheckout(container, params) {
                         return `
                             <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
                                 <div style="position: relative;">
-                                    <img src="${product.image || '/images/earrings-jhumka.jpg'}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
+                                    <img src="${product.image || './images/earrings-jhumka.jpg'}" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
                                     <span style="position: absolute; top: -5px; right: -5px; background: #800000; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem;">${item.quantity}</span>
                                 </div>
                                 <div style="flex: 1;">
