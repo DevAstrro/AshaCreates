@@ -2,6 +2,6 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // This tells Vite that the app will be hosted at https://DevAstrro.github.io/AshaCreates/
-  base: '/AshaCreates/',
+  // Using relative path so it works regardless of repo name spelling
+  base: './',
 });
